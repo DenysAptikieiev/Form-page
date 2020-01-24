@@ -1,0 +1,281 @@
+@colorBaseText: rgba(97, 105, 131, 255);
+
+@font-face {
+  font-family: Museo Sans Cyrl-300;
+  src: url("../../fonts/MuseoSansCyrl_0.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url("../../fonts/HelveticaNeue.ttf");
+}
+
+body {
+    font-family: "Museo Sans Cyrl-300";  
+    margin: 0;
+    color: @colorBaseText;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+.hide {
+  display: none;
+}
+
+.main {
+  min-height: 100vh;
+  background-image: url(../../images/background/bg.png);
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.how-to-help {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 34px;
+
+  p, span {
+    color: #fff;
+  }
+
+}
+
+.block-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    // font-size: 34.221px;
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  img {
+    width: 80px;
+    margin-right: 14px;
+  }
+}
+
+.btn-how-to-help {
+  width: 244px;
+  height: 72px;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(50deg, rgba(126,160,216,1) 0%, rgba(125,154,214,1) 100%);
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.16);
+  color: #fff;
+  font-size: 34px;
+  opacity: 0.82;
+}
+
+.block-form {
+  background-image: url(../../images/background/bg-right.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: @colorBaseText;
+  font-family: "Helvetica Neue";
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.form {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: stretch;
+
+  input {
+    width: 572px;
+    height: 95px;
+    border: none;
+    border-bottom: 1px solid @colorBaseText;
+    background: transparent;
+    margin-top: 92px;
+    padding: 15px 0;
+
+    color: @colorBaseText;
+    font-weight: bold;
+    &::placeholder {
+      color: @colorBaseText;
+      font-size: 34px;
+      line-height: 1.412;
+    }
+    &:hover::placeholder {
+      color: #fff;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  input:active, input:focus {
+    outline: none;
+    border-bottom: 1px solid #00bdff;
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    color: @colorBaseText;
+    font-size: 32px;
+
+    span {
+      margin-left: 3px;
+      color: #48a4d9;
+    }
+  }
+
+  label {
+    position: relative;
+  }
+}
+
+.back-to-page {
+  position: absolute;
+  top: 20%;
+  left: 1%;
+}
+
+.back-to-page-arrow {
+  width: 30px;
+}
+
+.correct-email {
+  width: 130px;
+  padding: 10px;
+
+  position: absolute;
+  top: 10px;
+  left: 250px;
+
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #eeeff1;
+}
+
+.idea {
+  position: absolute;
+  left: -7px;
+  top: 10px;
+
+  width: 15px;
+  height: 15px;
+  background-color: #eeeff1;
+  transform: rotate(45deg);
+}
+
+.btn-form {
+  width: 572px;
+  padding: 15px 0;
+  margin: 65px 0 93px 0;
+  color: white;
+
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.16);
+  background: linear-gradient(
+    50deg,
+    rgba(18, 107, 213, 1) 22%,
+    rgba(72, 164, 217, 1) 100%
+  );
+
+  &:hover {
+    background: linear-gradient(
+      50deg,
+      rgba(72, 164, 217, 1) 22%,
+      rgba(18, 107, 213, 1) 100%
+    );
+  }
+}
+
+.log-in {
+  position: relative;
+
+  &:hover .arrow {
+    right: 220px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 17px;
+  right: 230px;
+  width: 15px;
+  transition: 0.3s ease;
+}
+
+.text {
+  h2 {
+    font-size: 64px;
+    line-height: 0.882;
+    color: #fff;
+  }
+
+  p {
+    font-size: 32px;
+    line-height: 1.495;
+  }
+}
+
+.invalid {
+  outline-color: red;
+animation: shake .6s linear;
+}
+
+@-webkit-keyframes shake {
+  0% {
+      top:-10px;
+  }
+  16% {
+      top:9px;
+  }
+  33% {
+      top:-6px;
+  }
+  50% {
+      top:5px;
+  }
+  66% {
+      top:-2px;
+  }
+  83% {
+      top:1px;
+  }
+  100% {
+      top: 0px;
+  }
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.shake {
+    animation-name: shake;
+}
+
+@import "components/360-600.less";
+@import "components/600-1600.less";
+@import "components/1000.less";
