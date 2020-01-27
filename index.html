@@ -25,7 +25,22 @@
       </section>
       <section class="block-form">
          <form action="#" method="POST" class="form" target="blank">
-            
+            <div class="text">
+               <h2>Welcome back</h2>
+               <p>Sign in to contine to IO Technologies.</p>
+            </div>
+            <label for="">
+               <input type="email" name="email" id="email" placeholder="Your email" required>
+               <div class="correct-email hide">
+                  <div class="idea"></div>
+                  <span>Oops! You entered an invalid email</span>
+               </div>
+            </label>
+            <input type="password" name="pwd" id="pwd" placeholder="Password" autocomplete="current-password" required>
+            <button type="button" class="log-in btn-form">
+               LOG IN<img class="arrow" src="assets/images/icon/right-arrow.png"alt="arrow">
+            </button>
+            <a href="#" class="forgot-pwd">Forgot your password?<span>Reset</span></a>
          </form>
       </section>
    </main>
